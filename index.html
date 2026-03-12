@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PST BPS Kabupaten Buol</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container main-container">
+
+        <!-- ======================= -->
+        <!-- LANDING PAGE SECTION    -->
+        <!-- ======================= -->
+        <section id="landing-section" class="glass-panel slide-in">
+            <header class="page-header">
+                <div class="logo-container">
+                    <!-- BPS Logo Graphic -->
+                    <img src="logo.jpg" alt="Logo BPS" class="logo">
+                </div>
+                <h1>Selamat Datang di PST</h1>
+                <p>Pelayanan Statistik Terpadu (PST) BPS Kabupaten Buol</p>
+                <div class="header-divider"></div>
+                <p class="subtitle">Silakan pilih layanan yang Anda butuhkan di bawah ini:</p>
+            </header>
+
+            <div class="services-grid">
+                <!-- BUku Tamu Service -->
+                <button class="service-card primary" id="btn-show-form">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Buku Tamu</h3>
+                    <p>Isi buku tamu untuk mencatat kunjungan/permintaan data Anda.</p>
+                </button>
+
+                <!-- LAPOR Service -->
+                <div class="service-card lapor-card">
+                    <div class="lapor-header">
+                        <div class="card-icon lapor-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>LAPOR!</h3>
+                    </div>
+                    <p class="lapor-desc">Layanan Aspirasi dan Pengaduan Online Rakyat. Ingin melapor? Kesini aja!</p>
+
+                    <div class="lapor-links">
+                        <a href="https://www.lapor.go.id" target="_blank" class="lapor-btn action-btn">
+                            <i class="fas fa-globe"></i> lapor.go.id
+                        </a>
+                        <a href="sms:1708" class="lapor-btn action-btn">
+                            <i class="fas fa-sms"></i> SMS ke 1708
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media Service -->
+                <div class="service-card sosmed-card">
+                    <div class="lapor-header">
+                        <div class="card-icon sosmed-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Kontak & Sosmed</h3>
+                    </div>
+                    <p class="lapor-desc">Atau Lapor & Konsultasi via Sosial Media BPS Kabupaten Buol.</p>
+
+                    <div class="sosmed-links">
+                        <a href="https://wa.me/6285173177207" target="_blank" class="sosmed-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> Whatsapp
+                        </a>
+                        <a href="https://instagram.com/bps_kab_buol" target="_blank" class="sosmed-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://facebook.com/bpsbuol" target="_blank" class="sosmed-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://buolkab.bps.go.id" target="_blank" class="sosmed-btn website">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= -->
+        <!-- FORM BUKU TAMU SECTION  -->
+        <!-- ======================= -->
+        <section id="form-section" class="hidden">
+            <div class="glass-panel slide-in">
+                <button id="btn-back" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Kembali
+                </button>
+
+                <header class="form-header">
+                    <h2>Formulir Buku Tamu</h2>
+                    <p>Mohon lengkapi data kunjungan Anda</p>
+                </header>
+
+                <form id="bukutamu-form">
+                    <div class="form-group">
+                        <label for="nama"><i class="fas fa-user"></i> Nama Lengkap *</label>
+                        <input type="text" id="nama" name="Nama" required placeholder="Masukkan nama lengkap Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instansi"><i class="fas fa-building"></i> Asal Instansi/Perusahaan *</label>
+                        <input type="text" id="instansi" name="Instansi" required
+                            placeholder="Contoh: Dinas Pertanian / Universitas / Umum">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kontak"><i class="fab fa-whatsapp"></i> Nomor HP / WhatsApp *</label>
+                        <input type="tel" id="kontak" name="Kontak" required placeholder="08xxxxxxxxxx">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Alamat Email</label>
+                        <input type="email" id="email" name="Email" placeholder="nama@email.com (Opsional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tujuan"><i class="fas fa-crosshairs"></i> Tujuan Layanan *</label>
+                        <select id="tujuan" name="Tujuan" required>
+                            <option value="" disabled selected>Pilih tujuan layanan</option>
+                            <option value="Permintaan Data">Permintaan Data Mikro/Makro</option>
+                            <option value="Konsultasi Statistik">Konsultasi Statistik</option>
+                            <option value="Rekomendasi Kegiatan Statistik">Rekomendasi Kegiatan Statistik (Romantik)
+                            </option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rincian"><i class="fas fa-align-left"></i> Rincian Data yang Dicari / Keperluan
+                            *</label>
+                        <textarea id="rincian" name="Rincian" rows="4" required
+                            placeholder="Jelaskan secara detail data atau informasi yang Anda butuhkan..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Kirim Data</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </form>
+
+                <div id="success-message" class="message-card hidden">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h2>Terima Kasih!</h2>
+                    <p>Data kunjungan Anda telah berhasil disimpan.</p>
+                    <button id="reset-btn" class="secondary-btn">Ikuti Layanan Lain</button>
+                </div>
+
+                <div id="error-message" class="message-card error hidden">
+                    <div class="error-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 8V12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 16H12.01" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h2>Terjadi Kesalahan</h2>
+                    <p>Maaf, gagal mengirim data. Silakan coba lagi atau hubungi petugas kami.</p>
+                    <button id="retry-btn" class="secondary-btn">Coba Lagi</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year">2026</span> Badan Pusat Statistik Kabupaten Buol</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
