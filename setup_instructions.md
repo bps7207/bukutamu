@@ -38,11 +38,12 @@ function doPost(e) {
     
     // Menyiapkan baris data yang akan dimasukkan ke spreadsheet
     // Urutan kolom: Timestamp, Nama, Instansi, Kontak, Email, Tujuan, Rincian
+    // Note: Menambahkan tanda petik tunggal (') di depan data.Kontak agar Google Sheet tidak menghilangkan angka 0 di depan
     const rowData = [
       timestamp,
       data.Nama || "",
       data.Instansi || "",
-      data.Kontak || "",
+      "'" + (data.Kontak || ""), 
       data.Email || "",
       data.Tujuan || "",
       data.Rincian || ""
