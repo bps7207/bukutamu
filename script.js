@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================
     // IMPORTANT: REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT URL
     // ==========================================================
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzeAgRw_Mc4RTCUnYG-Km-LcetPAz-XPmkpVVJhz1RHs9uGnEp7tMX8p5SXYhH24ats/exec';
+    const scriptURL = '{{APPS_SCRIPT_URL}}';
 
     // Navigation Logic
     btnShowForm.addEventListener('click', () => {
